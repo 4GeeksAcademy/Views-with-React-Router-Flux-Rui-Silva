@@ -1,10 +1,9 @@
 import React from "react";
-import Navbar from "./navbar.jsx";
-import Jumbotron from "./jumbotron.jsx";
-import Cards from "./cards.jsx";
-import Footer from "./footer.jsx";
+import Navbar from "/src/js/component/navbar.jsx"
+import Jumbotron from "/src/js/component/jumbotron.jsx";
+import Cards from "/src/js/component/cards.jsx";
+import Footer from "/src/js/component/footer.jsx";
 
-//create your first component
 const Home = () => {
 
 	return (

@@ -1,6 +1,10 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 const Navbar = (props) => {
+
+    const navigate = useNavigate();
+
     return (
         <nav className="navbar navbar-dark navbar-expand-lg bg-dark">
             <div className="container-fluid col-9">
@@ -15,13 +19,13 @@ const Navbar = (props) => {
                                 <a className="nav-link active text-light" aria-current="page" href="#">{props.link1}</a>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link active text-white-50" aria-current="page" href="#">{props.link2}</a>
+                                <a onClick={() => navigate("/about")} className="nav-link active text-white-50" aria-current="page" href="#">{props.link2}</a>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link active text-white-50" aria-current="page" href="#">{props.link3}</a>
+                                <a onClick={() => navigate("/services")} className="nav-link active text-white-50" aria-current="page" href="#">{props.link3}</a>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link active text-white-50" aria-current="page" href="#">{props.link4}</a>
+                                <a onClick={() => navigate("/contact")} className="nav-link active text-white-50" aria-current="page" href="#">{props.link4}</a>
                             </li>    
                         </ul>
                     </div>
