@@ -1,15 +1,19 @@
 import React from "react";
+import { useSelector } from "react-redux";
 import Navbar from "/src/js/component/navbar.jsx"
 import Jumbotron from "/src/js/component/jumbotron.jsx";
 import Cards from "/src/js/component/cards.jsx";
 import Footer from "/src/js/component/footer.jsx";
+import { addTitle } from "../component/actions.js";
 
 const Home = () => {
+
+	const state = useSelector((state) => state)
 
 	return (
 		<div className="container-flex">
 			<Navbar title={"Start Bootstrap"} link1={"Home"} link2={"About"} link3={"Services"} link4={"Contact"} />
-			<Jumbotron title={"A Warm Welcome!"} description={
+			<Jumbotron title={state.title} description={
 				"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
 			} button={"Call to action!"} />
 			<Cards url={"https://fastly.picsum.photos/id/2/5000/3333.jpg?hmac=_KDkqQVttXw_nM-RyJfLImIbafFrqLsuGO5YuHqD-qQ"} 
