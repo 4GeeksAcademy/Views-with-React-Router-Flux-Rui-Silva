@@ -7,7 +7,6 @@ const initialState = {
 function reducer(state = initialState, action) {
     switch (action.type) {
         case ADD_TITLE:
-            // console.log('Here something', action);
             return{
 
                 title: action.title

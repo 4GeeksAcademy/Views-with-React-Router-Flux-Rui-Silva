@@ -20,7 +20,11 @@ const Services = () => {
             value={newTitle}
             onChange={(e) => {
                 setNewTitle(e.target.value)
-                dispatch(addTitle(newTitle))
+            }}
+            onKeyDown={(e) => {
+                if(e.key === "Enter") {
+                    dispatch(addTitle(newTitle))
+                }
             }}
             type="text" 
             placeholder="Insert a title" />
